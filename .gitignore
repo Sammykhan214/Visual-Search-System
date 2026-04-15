@@ -1,0 +1,6 @@
+#data
+data/
+
+#python environment
+venv/
+vssenv/
