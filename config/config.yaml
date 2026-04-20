@@ -1,0 +1,22 @@
+#Creating config.yaml is a 12-factor app principle in SaaS.
+#The 12-Factor App methodology is a set of best practices designed to build scalable, portable, and resilient cloud-native SaaS applications.
+
+data:
+  raw_path: "data/raw/images"
+  processed_path: "data/processed"
+  metadata_path: "data/processed/metadata.csv"
+  embeddings_path: "data/processed/embeddings"
+  index_path: "data/indexes/faiss_index.bin"
+
+model:
+  name: "resnet50" #Options: resnet50, dinov2_vits14, clip_ViT-B/32
+  embedding_size: 2048 #will depend on the model chosen
+  device: "cuda" #Options: cuda, cpu
+
+search:
+  top_k: 10
+  metric: "cosine" #Options: cosine, euclidean
+
+api:
+  host: "0.0.0.0"
+  port: 8000
