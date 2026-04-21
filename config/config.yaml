@@ -9,9 +9,9 @@ data:
   index_path: "data/indexes/faiss_index.bin"
 
 model:
-  name: "resnet50" #Options: resnet50, dinov2_vits14, clip_ViT-B/32
-  embedding_size: 2048 #will depend on the model chosen
-  device: "cuda" #Options: cuda, cpu
+  name: "mobilenetv3" #Options: resnet18, mobilenetv3, mobilenetv3_large
+  embedding_dim: 576 #will depend on the model chosen
+  device: "cpu" #Options: cuda, cpu
 
 search:
   top_k: 10
